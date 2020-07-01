@@ -50,7 +50,8 @@ if __name__ == "__main__":
 
     dt_train = kpca.transform(X_train)
     dt_test = kpca.transform(X_test)
-
+    
+    #solver = 'lbfgs' -> es una forma mas rapida de encontrar el costo que una gradiente descendente
     logistic = LogisticRegression(solver='lbfgs')
     logistic.fit(dt_train, y_train)
 
